@@ -54,7 +54,7 @@
     display: flex;
     align-items: center;
     border-radius: 8px;
-    padding: 3px;
+    padding: 6px;
     font-weight: bold;
 }
 
@@ -101,6 +101,7 @@
     background-color: rgb(233, 233, 233);
     border: none;
     border-radius: 30px;
+    padding: 10px;
 }
 
 .search img {
@@ -109,23 +110,72 @@
 
 .notification {
     margin: 5px;
-    background-color: chartreuse;
+    display: grid;
+    grid-template: 1fr / 1fr 0.8fr 3fr;
+    align-items: center;
+}
+
+.notification p {
+    font-weight: bold;
+}
+
+.notification img {
+    width: 30px;
+}
+
+.notification span {
+    cursor: pointer;
+}
+
+.notification img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .bottom-header {
     margin: 5px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.3fr;
 }
 
 .user {
     margin: 5px;
-    background-color: crimson;
+    padding-left: 30px;
+    display: grid;
+    grid-template: 1fr / 1fr 5fr;
+}
+
+.user img {
+    width: 80px;
 }
 
 .buttons {
     margin: 5px;
-    background-color: darkgoldenrod;
+    text-align: center;
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+}
+
+.buttons .options {
+    margin: 20px;
+    background-color: #3492D4;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    padding-top: 10px;
+}
+
+.buttons .options:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.buttons a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .main {
@@ -203,7 +253,7 @@
 }
 
 .side-content {
-    /* grid-column: 2 / 3; */
+    width: 300px;
     display: grid;
     grid-template-columns: 1fr;
     margin: 10px;
@@ -252,4 +302,24 @@
     padding: 25px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px gray;
+}
+
+.trending .users {
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+    justify-items: start;
+    margin-bottom: 20px;
+}
+
+.trending .users h1 {
+    font-size: 1rem;
+}
+
+.trending .users p {
+    color: gray;
+}
+
+.trending .users img {
+    width: 50px;
+    height: 50px;
 }
